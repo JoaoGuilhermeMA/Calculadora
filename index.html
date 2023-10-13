@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <section class="calculadora">
+        <div>
+            <input type="text" id="displayId" class="display" placeholder="0" disabled="disabled" />
+        </div>
+        <div class="especiais">
+            <button class="especial">√</button>
+            <button class="especial">π</button>
+            <button class="especial">^</button>
+            <button class="especial">!</button>
+        </div>
+        <div class="teclas">
+            <button class="tecla primeira_linha" onclick="limparTela()">AC</button>
+            <button class="tecla primeira_linha">()</button>
+            <button class="tecla primeira_linha">%</button>
+            <button class="tecla primeira_linha" onclick="operacao('÷')">÷</button>
+            <button class="tecla" onclick="adicionarNumero(7)">7</button>
+            <button class="tecla" onclick="adicionarNumero(8)">8</button>
+            <button class="tecla" onclick="adicionarNumero(9)">9</button>
+            <button class="tecla primeira_linha" onclick="operacao('x')">x</button>
+            <button class="tecla" onclick="adicionarNumero(4)">4</button>
+            <button class="tecla" onclick="adicionarNumero(5)">5</button>
+            <button class="tecla" onclick="adicionarNumero(6)">6</button>
+            <button class="tecla primeira_linha" onclick="operacao('-')">-</button>
+            <button class="tecla" onclick="adicionarNumero(1)">1</button>
+            <button class="tecla" onclick="adicionarNumero(2)">2</button>
+            <button class="tecla" onclick="adicionarNumero(3)">3</button>
+            <button class="tecla primeira_linha" onclick="operacao('+')">+</button>
+            <button class="tecla" onclick="adicionarNumero(0)">0</button>
+            <button class="tecla">,</button>
+            <button class="tecla" onclick="deletar()">⌫</button>
+            <button class="tecla igual" onclick="calcular()">=</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

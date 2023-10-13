@@ -1,0 +1,84 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.calculadora {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    border: solid 1px #253133;
+    padding: 40px;
+    background-color: #302727;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px rgb(22, 22, 22);
+    width: 385px;
+}
+
+.display {
+    width: 370px;
+    text-align: right;
+    font-size: 50px;
+    color: #e1e3db;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #142026;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px #000;
+}
+
+.display::placeholder {
+    color: #e1e3db;
+}
+
+.teclas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.tecla {
+    width: 100%;
+    padding: 20px;
+    font-size: 24px;
+    background-color: #f2511b;
+    color: #e1e3db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tecla:hover {
+    background-color: #505A5C;
+}
+
+.primeira_linha {
+    background-color: #f2861b;
+}
+
+.especiais {
+    display: flex;
+    justify-content: space-between;
+}
+
+.especial {
+    flex: 1;
+    padding: 10px; 
+    font-size: 18px;
+    background-color: #302727;
+    color: #e1e3db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.especial:hover {
+    background-color: #505A5C;
+}
+
+.igual {
+    background-color: #ba2d2d;
+}
