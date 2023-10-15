@@ -92,4 +92,50 @@ function calcularFatorial() {
       display.value = resultado;
     }
 }
-  
+
+function adicionarPorcentagem() {
+    if (conta === "") {
+        alert("Digite um número antes de usar a porcentagem.");
+        return;
+    }
+
+    const ultimoCaractere = conta.slice(-1);
+    if (['+', '-', '*', '/'].includes(ultimoCaractere)) {
+        alert("Não é permitido adicionar uma porcentagem após um operador.");
+        return;
+    }
+
+    const valorNoVisor = parseFloat(display.value);
+    const porcentagem = parseFloat(prompt("Digite a porcentagem que você deseja calcular:"));
+
+    if (!isNaN(porcentagem)) {
+        // Realize o cálculo da porcentagem
+        const resultado = (valorNoVisor * (porcentagem / 100)).toFixed(2);
+
+        display.value = resultado;
+        conta = resultado.toString();
+    } else {
+        alert("Porcentagem inválida. Digite um número válido para a porcentagem.");
+    }
+}
+
+let pilha = [];
+function alternarParenteses() {
+    if (display.value === "") {
+        pilha.push('(');
+        display.value = display.value + pilha[pilha.length - 1];
+        return;
+    }
+    if (display.value.slice(-1) === '+' || display.value.slice(-1) === '-' || display.value.slice(-1) === 'x' || 
+    display.value.slice(-1) === '÷') {
+        pilha.push('(');
+        display.value = display.value + pilha[pilha.length - 1];
+        return;
+    }
+    if (pilha[pilha.length - 1] === '(') {
+        pilha.pop();
+        display.value = display.value + ')';
+    }
+
+}
+
