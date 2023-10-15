@@ -49,8 +49,47 @@ function operacao(operador) {
     }
 }
 
+function pegarPI() {
+    let nPI = Math.PI;
+    display.value = display.value + nPI;
+    conta = conta + nPI;
+}
+
+function cacularRaiz(simbolo) {
+    let numero = eval(conta)
+    numero = Math.sqrt(numero);
+    display.value = numero;
+}
+
 function calcular() {
     conta = eval(conta)
     display.value = conta;
     feito = true;
 }
+
+function potencia() {
+    const base = parseFloat(display.value);
+    const expoente = prompt("Digite o expoente:");
+
+    if (!isNaN(base) && !isNaN(expoente)) {
+        const resultado = Math.pow(base, expoente);
+        display.value = resultado;
+        conta = resultado.toString();
+    } else {
+        alert("Insira um número válido como base e expoente.");
+    }
+}
+
+function calcularFatorial() {
+    let numero = eval(conta)
+    if (numero === 0 || numero === 1) {
+      display.value = 1;
+    } else {
+      let resultado = 1;
+      for (let i = 2; i <= numero; i++) {
+        resultado *= i;
+      }
+      display.value = resultado;
+    }
+}
+  
