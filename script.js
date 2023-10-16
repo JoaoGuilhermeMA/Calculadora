@@ -109,7 +109,6 @@ function adicionarPorcentagem() {
     const porcentagem = parseFloat(prompt("Digite a porcentagem que você deseja calcular:"));
 
     if (!isNaN(porcentagem)) {
-        // Realize o cálculo da porcentagem
         const resultado = (valorNoVisor * (porcentagem / 100)).toFixed(2);
 
         display.value = resultado;
@@ -136,6 +135,13 @@ function alternarParenteses() {
         pilha.pop();
         display.value = display.value + ')';
     }
-
 }
 
+function adicionarPonto() {
+    if (display.value === "" || ['+', '-', 'x', '÷'].includes(display.value.slice(-1))) {
+        alert("Não pode adicionar uma virgula agora seu CABAÇO!!!");
+        return;
+    }
+    display.value += ',';
+    conta += '.';
+}
